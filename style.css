@@ -30,6 +30,7 @@ body {
 .mv {
   background-image: url(img/pc_bg_mv.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   height: 600px;
   color: #fff;
@@ -51,38 +52,42 @@ body {
   line-height: 1;
 }
 .content {
-  padding: 70px 165px 100px 165px;
+  padding: 70px 0px 100px 0px;
 }
-.content .news {
-  column-gap: 96px;
+.content .news__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 30px;
+  column-gap: 90px;
   display: flex;
   margin-bottom: 80px;
 }
-.content .news .news__title {
+.content .news__title {
   color: #DD1B57;
   font-size: 40px;
+  width: 160px;
 }
-.content .news .news__body {
-  width: 75%;
+.content .news__body {
   margin-bottom: 15px;
 }
-.content .news .news__body .news-list {
+.content .news__body .news-list {
   list-style: none;
+  padding-left: 0px;
 }
-.content .news .news__body .news-list .news-list__item {
+.content .news__body .news-list .news-list__item {
   border-bottom: solid #EDEDED 1px;
   padding: 20px 0;
 }
-.content .news .news__body .news-list .news-list__item .news-list__link {
+.content .news__body .news-list .news-list__item .news-list__link {
   display: flex;
   column-gap: 40px;
   text-decoration: none;
   color: #151515;
 }
-.content .news .news__body .news-list .news-list__item--top {
+.content .news__body .news-list .news-list__item--top {
   padding-top: 0px;
 }
-.content .service::before {
+.content .service__container::before {
   content: "SERVICE";
   font-size: 168px;
   font-weight: bold;
@@ -92,41 +97,47 @@ body {
   top: -60px;
   right: 20px;
 }
-.content .service {
+.content .service__container {
   position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
-.content .service .service__title {
+.content .service__container .service__title {
   color: #DD1B57;
   font-size: 40px;
   margin-bottom: 58px;
 }
-.content .service .service-list {
-  display: flex;
-  justify-content: space-around;
+.content .service__container .service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
 }
-.content .service .service-list .service-list__item {
+.content .service__container .service-list .service-list__item {
   background-color: #fff;
-  width: 350px;
-  height: 260px;
   border-radius: 8px;
   box-shadow: 0 3px 21px #00000024;
   padding: 50px;
   text-align: center;
 }
-.content .service .service-list .service-list__item .material-icons-round {
+.content .service__container .service-list .service-list__item .material-icons-round {
   color: #dd1b57;
   font-size: 48px;
   vertical-align: bottom;
 }
-.content .service .service-list .service-list__item .service-list__title {
+.content .service__container .service-list .service-list__item .service-list__title {
   margin-bottom: 19px;
 }
 .footer {
   color: #fff;
   background-color: #DD1B57;
-  padding: 64px 165px 50px 165px;
 }
-.footer .footer-list {
+.footer .footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+.footer .footer__container .footer-list {
   display: flex;
   list-style: none;
   gap: 40px;

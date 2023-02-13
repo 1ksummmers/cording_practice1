@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>START</title>
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -36,68 +36,74 @@
     </div>
     <div class="content">
         <!-- ニュース -->
-        <div class="news">
-            <div class="news-heading">
-                <h2 class="news__title">ニュース</h2>
+        <section class="news">
+            <div class="news__container">
+                <div class="news-heading">
+                    <h2 class="news__title">ニュース</h2>
+                </div>
+                <!-- ニュース記事 -->
+                <div class="news__body">
+                    <ul class="news-list">
+                        <li class="news-list__item news-list__item--top">
+                            <a href="#" class="news-list__link">
+                                <time datetime="2023-02-08" class="news-list__date">2023/02/08</time>
+                                <div class="news-list__title">コーポレートサイトをリニューアルしました</div>
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-list__link">
+                                <time datetime="2023-02-08" class="news__date">2023/02/09</time>
+                                <div class="news-list__title">採用を強化中です！一緒に働きませんか？</div>
+                            </a>
+                        </li>
+                        <li class="news-list__item">
+                            <a href="#" class="news-list__link">
+                                <time datetime="2023-02-08" class="news-list__date">2023/02/10</time>
+                                <div class="news-list__title">人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- ニュース記事 -->
-            <div class="news__body">
-                <ul class="news-list">
-                    <li class="news-list__item news-list__item--top">
-                        <a href="#" class="news-list__link">
-                            <time datetime="2023-02-08" class="news-list__date">2023/02/08</time>
-                            <div class="news-list__title">コーポレートサイトをリニューアルしました</div>
-                        </a>
-                    </li>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <time datetime="2023-02-08" class="news__date">2023/02/09</time>
-                            <div class="news-list__title">採用を強化中です！一緒に働きませんか？</div>
-                        </a>
-                    </li>
-                    <li class="news-list__item">
-                        <a href="#" class="news-list__link">
-                            <time datetime="2023-02-08" class="news-list__date">2023/02/10</time>
-                            <div class="news-list__title">人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </section>
         <!-- サービス -->
-        <div class="service">
-            <div class="service-heading">
-                <h2 class="service__title">サービス</h2>
+        <section class="service">
+            <div class="service__container">
+                <div class="service-heading">
+                    <h2 class="service__title">サービス</h2>
+                </div>
+                <!-- サービス種類 -->
+                <div class="service-list">
+                    <div class="service-list__item">
+                        <span class="material-icons-round">work</span>
+                        <h3 class="service-list__title">人材紹介業</h3>
+                        <p class="service-list__text">新規サイトの制作はもちろん、リニューアルやリブランディングページの制作も可能です。</p>
+                    </div>
+                    <div class="service-list__item">
+                        <span class="material-icons-round">location_city</span>
+                        <h3 class="service-list__title">スクール事業</h3>
+                        <p class="service-list__text">オンラインでWeb制作を学べるスクールを運営しています。</p>
+                    </div>
+                    <div class="service-list__item">
+                        <span class="material-icons-round">desktop_windows</span>
+                        <h3 class="service-list__title">Webメディア運営</h3>
+                        <p class="service-list__text">人事系メディアやWebデザイン関連のメディアなどを複数運営しています。</p>
+                    </div>
+                </div>
             </div>
-            <!-- サービス種類 -->
-            <div class="service-list">
-                <div class="service-list__item">
-                    <span class="material-icons-round">work</span>
-                    <h3 class="service-list__title">人材紹介業</h3>
-                    <p class="service-list__text">新規サイトの制作はもちろん、リニューアルやリブランディングページの制作も可能です.</p>
-                </div>
-                <div class="service-list__item">
-                    <span class="material-icons-round">location_city</span>
-                    <h3 class="service-list__title">スクール事業</h3>
-                    <p class="service-list__text">オンラインでWeb制作を学べるスクールを運営しています。</p>
-                </div>
-                <div class="service-list__item">
-                    <span class="material-icons-round">desktop_windows</span>
-                    <h3 class="service-list__title">Webメディア運営</h3>
-                    <p class="service-list__text">人事系メディアやWebデザイン関連のメディアなどを複数運営しています。</p>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
     <div class="footer">
-        <ul class="footer-list">
-            <li>ホーム</li>
-            <li>メッセージ</li>
-            <li>会社概要</li>
-        </ul>
-        <span class="copylight">©︎START</span>
-        <div>
-            <a href="https://webdesigner-go.com/coding-practice/beginner/">参照：無料コーディング練習場所</a>
+        <div class="footer__container">
+            <ul class="footer-list">
+                <li>ホーム</li>
+                <li>メッセージ</li>
+                <li>会社概要</li>
+            </ul>
+            <span class="copylight">©︎START</span>
+            <div>
+                <a href="https://webdesigner-go.com/coding-practice/beginner/">参照：無料コーディング練習場所</a>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
