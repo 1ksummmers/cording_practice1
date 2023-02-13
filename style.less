@@ -1,0 +1,145 @@
+// 企業サイトコーディング
+
+body {
+    background: #fff;
+    font-size: 15px;
+    font-family: 'Noto Sans','Noto Sans JP', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; 
+   //色指定
+    @link-color: #349bf4;
+    @main-color: #dd1b57;
+    @text-color: #333;
+}
+.header {
+    padding: 20px 70px 15px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .gnav__list {
+        display: flex;
+        gap: 30px;
+        .gnav__item {
+          list-style: none;
+          font-weight: bold;
+          font-size: 16px;
+          letter-spacing: 0.05em;
+        }
+        .gnav__link {
+            text-decoration: none;
+            color: #333;
+        }
+        .gnav__link--active {
+            text-decoration: none;
+            color: #dd1b57;
+        }
+    }
+}
+.mv {
+    background-image: url(img/pc_bg_mv.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mv__title-area {
+        text-align: center;
+        text-shadow: 0 4px 6px #00000024;
+        .mv__title {
+            font-size: 160px;
+            margin-bottom: -20px;
+        }
+        .mv__subtitle {
+            font-size: 24px;
+            letter-spacing: 0.1em;
+            line-height: 1;
+        }
+    }
+}
+.content{
+    padding: 70px 165px 100px 165px;
+    .news {
+        column-gap: 96px;
+        display: flex;
+        margin-bottom: 80px;
+        .news__title {
+            color: #DD1B57;
+            font-size: 40px;
+        }
+        .news__body{
+            width: 75%;
+            margin-bottom: 15px;
+            .news-list {
+                list-style: none;
+                .news-list__item {
+                    border-bottom: solid #EDEDED 1px;
+                    padding: 20px 0;
+                    .news-list__link {
+                        display: flex;
+                        column-gap: 40px;
+                        text-decoration: none;
+                        color: #151515;
+                    }
+                }
+                .news-list__item--top{
+                    padding-top: 0px;
+                }
+                
+            }
+        }
+        
+    }
+    // 擬似要素「SERVICE」
+    .service::before {
+        content: "SERVICE";
+        font-size: 168px;
+        font-weight: bold;
+        color: #F2F2F2;
+        // 配置
+        z-index: -1;
+        position: absolute;
+        top: -60px;
+        right: 20px;
+    }
+    .service {
+        position: relative;
+        .service__title {
+            color: #DD1B57;
+            font-size: 40px;
+            margin-bottom: 58px;
+        }
+        .service-list {
+            display: flex;
+            justify-content: space-around;
+            .service-list__item {
+                background-color: #fff;
+                width: 350px;
+                height: 260px;
+                border-radius: 8px;
+                box-shadow: 0 3px 21px #00000024;
+                padding: 50px;
+                // テキスト
+                text-align: center;
+                .material-icons-round {
+                    color: #dd1b57;
+                    font-size: 48px;
+                    vertical-align: bottom;
+                }
+                .service-list__title {
+                    margin-bottom: 19px;
+                }
+            }
+        }
+    }
+}
+.footer {
+    color: #fff;
+    background-color: #DD1B57;
+    padding: 64px 165px 50px 165px;
+    .footer-list {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        padding-left: 0;
+    }
+}
