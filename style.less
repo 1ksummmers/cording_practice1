@@ -16,26 +16,61 @@ body {
     @sp-small: 375px;
 }
 .header {
-    padding: 20px 70px 15px 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .gnav__list {
+    .header__container {
+        padding: 20px 70px 20px 70px;
         display: flex;
-        gap: 30px;
-        .gnav__item {
-          list-style: none;
-          font-weight: bold;
-          font-size: 16px;
-          letter-spacing: 0.05em;
+        align-items: center;
+        justify-content: space-between;
+        .gnav__list {
+            display: flex;
+            gap: 30px;
+            .gnav__item {
+            list-style: none;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            }
+            .gnav__link {
+                text-decoration: none;
+                color: #333;
+            }
+            .gnav__link--active {
+                text-decoration: none;
+                color: #dd1b57;
+            }
         }
-        .gnav__link {
-            text-decoration: none;
-            color: #333;
+    }
+    .burger {
+        display: none;
+    }
+}
+// ハンバーガーメニュー
+// MediaQueries_SP
+@media screen and (max-width:767px) {
+    .header{
+        display: flex;
+        .header__container {
+            padding: 20px 70px 20px 20px;
+            .gnav {
+                display: none;
+            }
         }
-        .gnav__link--active {
-            text-decoration: none;
-            color: #dd1b57;
+        .burger {
+            width: 73px;
+            height: 73px;
+            background-color: #dd1b57;
+            margin-left: auto;
+            padding: 5px;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            .menu {
+                
+                .material-icons-round {
+                    color: #fff;
+                    font-size: 40px;
+                }
+            }
         }
     }
 }
@@ -62,6 +97,21 @@ body {
             line-height: 1;
         }
     }
+    // MediaQueries_SP
+    @media screen and (max-width: 767px){
+        background-image: url(img/sp_bg_mv.jpg);
+        .mv__title-area{
+            .mv__title {
+                font-size: 80px;
+                margin-bottom: -10px;
+            }
+            .mv__subtitle {
+                font-size: 20px;
+                letter-spacing: 0.1em;
+                line-height: 1;
+            }
+        }
+    }
 }
 .content{
     padding: 70px 0px 100px 0px;
@@ -72,11 +122,21 @@ body {
         column-gap: 90px;
         display: flex;
         margin-bottom: 80px;
+        // MediaQueries_SP
+        @media screen and (max-width: 767px) {
+            display: block;  
+            .news-list__link {
+                display: block;
+            }
+        }
     }
     .news__title {
         color: #DD1B57;
         font-size: 40px;
         width: 160px;
+        @media screen and (max-width: 767px) {
+            font-size: 35px;
+        }
     }
     .news__body{
         margin-bottom: 15px;
@@ -91,6 +151,10 @@ body {
                     column-gap: 40px;
                     text-decoration: none;
                     color: #151515;
+                    // MediaQueries_SP
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
                 }
             }
             .news-list__item--top{
@@ -110,6 +174,11 @@ body {
         position: absolute;
         top: -60px;
         right: 20px;
+        // MediaQueris_SP
+        @media screen and (max-width: 767px){
+            font-size: 80px;
+            top: -10px;
+        }
     }
     .service__container {
         position: relative;
@@ -139,6 +208,19 @@ body {
                 }
                 .service-list__title {
                     margin-bottom: 19px;
+                }
+            }
+        }
+        //MediaQueries_SP
+        @media screen and (max-width: 767px) {
+            .service__title {
+                font-size: 35px;
+                margin-bottom: 20px;
+            }
+            .service-list{
+            display: block;
+                .service-list__item:not(:last-child) {
+                    margin-bottom: 20px;
                 }
             }
         }
