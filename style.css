@@ -27,32 +27,67 @@ body {
   text-decoration: none;
   color: #dd1b57;
 }
-.header .burger {
+.header .burger,
+.header .menu {
   display: none;
 }
 @media screen and (max-width: 767px) {
   .header {
+    z-index: 1;
     display: flex;
   }
   .header .header__container {
     padding: 20px 70px 20px 20px;
   }
+  .header .header__container .header__logo {
+    width: 70%;
+  }
   .header .header__container .gnav {
     display: none;
   }
   .header .burger {
+    background: #dd1b57 no-repeat center center;
+    background-image: url(img/menu.svg);
     width: 73px;
     height: 73px;
-    background-color: #dd1b57;
     margin-left: auto;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
   }
-  .header .burger .menu .material-icons-round {
+  .header .burger.is-active {
+    background-image: url(img/close.svg);
+  }
+  .header .menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #DD1B57;
+    position: fixed;
+    top: 0;
+    left: 180px;
+    z-index: 1;
+    display: none;
+  }
+  .header .menu.is-active {
+    display: flex;
+  }
+  .header .menu.is-active .gnav__list {
+    list-style: none;
+    margin-top: 100px;
+  }
+  .header .menu.is-active .gnav__list .gnav__item {
+    padding-bottom: 20px;
+  }
+  .header .menu.is-active .gnav__list .gnav__item .gnav__link {
     color: #fff;
-    font-size: 40px;
+    text-decoration: none;
+  }
+  .header .menu.is-active .gnav__list .gnav__item .gnav__link--active {
+    color: #EF90A4;
+    text-decoration: none;
   }
 }
 .mv {

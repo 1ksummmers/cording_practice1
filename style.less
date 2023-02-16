@@ -40,35 +40,70 @@ body {
             }
         }
     }
-    .burger {
+    .burger,
+    .menu {
         display: none;
     }
 }
 // ハンバーガーメニュー
 // MediaQueries_SP
 @media screen and (max-width:767px) {
-    .header{
+    .header {
+        z-index: 1;
         display: flex;
         .header__container {
             padding: 20px 70px 20px 20px;
+            .header__logo {
+                width: 70%;
+            }
             .gnav {
                 display: none;
             }
         }
         .burger {
+            // backgroundの指定順序に注意
+            background: #dd1b57 no-repeat center center;
+            background-image: url(img/menu.svg);
             width: 73px;
             height: 73px;
-            background-color: #dd1b57;
             margin-left: auto;
             padding: 5px;
             display: flex;
-                align-items: center;
-                justify-content: center;
-            .menu {
-                
-                .material-icons-round {
-                    color: #fff;
-                    font-size: 40px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2; 
+        }
+        .burger.is-active {
+            background-image: url(img/close.svg);
+        }
+        .menu {
+            width: 100vw;
+            height: 100vh;
+            background-color: #DD1B57;
+            // 位置を固定
+            position: fixed;
+            top: 0;
+            left: 180px;
+            z-index: 1;
+            // menuを一時的に隠す
+            display: none;
+        }
+        .menu.is-active {
+            display: flex;
+            .gnav__list {
+                list-style: none;
+                margin-top: 100px;
+                .gnav__item {
+                    padding-bottom: 20px;
+                    .gnav__link {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                    .gnav__link--active{
+                        color: #EF90A4;
+                        text-decoration: none;
+                    }
                 }
             }
         }
