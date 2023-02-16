@@ -3,33 +3,97 @@ body {
   font-size: 15px;
   font-family: 'Noto Sans', 'Noto Sans JP', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
-.header {
-  padding: 20px 70px 15px 70px;
+.header .header__container {
+  padding: 20px 70px 20px 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.header .gnav__list {
+.header .header__container .gnav__list {
   display: flex;
   gap: 30px;
 }
-.header .gnav__list .gnav__item {
+.header .header__container .gnav__list .gnav__item {
   list-style: none;
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0.05em;
 }
-.header .gnav__list .gnav__link {
+.header .header__container .gnav__list .gnav__link {
   text-decoration: none;
   color: #333;
 }
-.header .gnav__list .gnav__link--active {
+.header .header__container .gnav__list .gnav__link--active {
   text-decoration: none;
   color: #dd1b57;
+}
+.header .burger,
+.header .menu {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    z-index: 1;
+    display: flex;
+  }
+  .header .header__container {
+    padding: 20px 70px 20px 20px;
+  }
+  .header .header__container .header__logo {
+    width: 70%;
+  }
+  .header .header__container .gnav {
+    display: none;
+  }
+  .header .burger {
+    background: #dd1b57 no-repeat center center;
+    background-image: url(img/menu.svg);
+    width: 73px;
+    height: 73px;
+    margin-left: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  .header .burger.is-active {
+    background-image: url(img/close.svg);
+  }
+  .header .menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: #DD1B57;
+    position: fixed;
+    top: 0;
+    left: 180px;
+    z-index: 1;
+    display: none;
+  }
+  .header .menu.is-active {
+    display: flex;
+  }
+  .header .menu.is-active .gnav__list {
+    list-style: none;
+    margin-top: 100px;
+  }
+  .header .menu.is-active .gnav__list .gnav__item {
+    padding-bottom: 20px;
+  }
+  .header .menu.is-active .gnav__list .gnav__item .gnav__link {
+    color: #fff;
+    text-decoration: none;
+  }
+  .header .menu.is-active .gnav__list .gnav__item .gnav__link--active {
+    color: #EF90A4;
+    text-decoration: none;
+  }
 }
 .mv {
   background-image: url(img/pc_bg_mv.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
   height: 600px;
   color: #fff;
@@ -50,39 +114,75 @@ body {
   letter-spacing: 0.1em;
   line-height: 1;
 }
-.content {
-  padding: 70px 165px 100px 165px;
+@media screen and (max-width: 767px) {
+  .mv {
+    background-image: url(img/sp_bg_mv.jpg);
+  }
+  .mv .mv__title-area .mv__title {
+    font-size: 80px;
+    margin-bottom: -10px;
+  }
+  .mv .mv__title-area .mv__subtitle {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
 }
-.content .news {
-  column-gap: 96px;
+.content {
+  padding: 70px 0px 100px 0px;
+}
+.content .news__container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 30px;
+  column-gap: 90px;
   display: flex;
   margin-bottom: 80px;
 }
-.content .news .news__title {
+@media screen and (max-width: 767px) {
+  .content .news__container {
+    display: block;
+  }
+  .content .news__container .news-list__link {
+    display: block;
+  }
+}
+.content .news__title {
   color: #DD1B57;
   font-size: 40px;
+  width: 160px;
 }
-.content .news .news__body {
-  width: 75%;
+@media screen and (max-width: 767px) {
+  .content .news__title {
+    font-size: 35px;
+  }
+}
+.content .news__body {
   margin-bottom: 15px;
 }
-.content .news .news__body .news-list {
+.content .news__body .news-list {
   list-style: none;
+  padding-left: 0px;
 }
-.content .news .news__body .news-list .news-list__item {
+.content .news__body .news-list .news-list__item {
   border-bottom: solid #EDEDED 1px;
   padding: 20px 0;
 }
-.content .news .news__body .news-list .news-list__item .news-list__link {
+.content .news__body .news-list .news-list__item .news-list__link {
   display: flex;
   column-gap: 40px;
   text-decoration: none;
   color: #151515;
 }
-.content .news .news__body .news-list .news-list__item--top {
+@media screen and (max-width: 767px) {
+  .content .news__body .news-list .news-list__item .news-list__link {
+    display: block;
+  }
+}
+.content .news__body .news-list .news-list__item--top {
   padding-top: 0px;
 }
-.content .service::before {
+.content .service__container::before {
   content: "SERVICE";
   font-size: 168px;
   font-weight: bold;
@@ -92,41 +192,65 @@ body {
   top: -60px;
   right: 20px;
 }
-.content .service {
-  position: relative;
+@media screen and (max-width: 767px) {
+  .content .service__container::before {
+    font-size: 80px;
+    top: -10px;
+  }
 }
-.content .service .service__title {
+.content .service__container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.content .service__container .service__title {
   color: #DD1B57;
   font-size: 40px;
   margin-bottom: 58px;
 }
-.content .service .service-list {
-  display: flex;
-  justify-content: space-around;
+.content .service__container .service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
 }
-.content .service .service-list .service-list__item {
+.content .service__container .service-list .service-list__item {
   background-color: #fff;
-  width: 350px;
-  height: 260px;
   border-radius: 8px;
   box-shadow: 0 3px 21px #00000024;
   padding: 50px;
   text-align: center;
 }
-.content .service .service-list .service-list__item .material-icons-round {
+.content .service__container .service-list .service-list__item .material-icons-round {
   color: #dd1b57;
   font-size: 48px;
   vertical-align: bottom;
 }
-.content .service .service-list .service-list__item .service-list__title {
+.content .service__container .service-list .service-list__item .service-list__title {
   margin-bottom: 19px;
+}
+@media screen and (max-width: 767px) {
+  .content .service__container .service__title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .content .service__container .service-list {
+    display: block;
+  }
+  .content .service__container .service-list .service-list__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 .footer {
   color: #fff;
   background-color: #DD1B57;
-  padding: 64px 165px 50px 165px;
 }
-.footer .footer-list {
+.footer .footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+.footer .footer__container .footer-list {
   display: flex;
   list-style: none;
   gap: 40px;
