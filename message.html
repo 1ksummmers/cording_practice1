@@ -7,18 +7,23 @@
     <title>START</title>
     <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- フォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 <body>
     <!-- ヘッダー -->
     <div class="header">
         <div class="header__container">
             <h1 class="header__logo">
-                <a href="#" class="gnav__link--active"><img src="img/logo.svg"></a>
+                <a href="index.html" class="gnav__link--active"><img src="img/logo.svg"></a>
             </h1>
             <nav class="gnav">
                 <ul class="gnav__list">
-                    <li class="gnav__item"><a href="#" class="gnav__link--active">ホーム</a></li>
-                    <li class="gnav__item"><a href="message.html" class="gnav__link">メッセージ</a></li>
+                    <li class="gnav__item"><a href="index.html" class="gnav__link">ホーム</a></li>
+                    <li class="gnav__item"><a href="#" class="gnav__link--active">メッセージ</a></li>
                     <li class="gnav__item"><a href="company.html" class="gnav__link">会社概要</a></li>
                 </ul>
             </nav>
@@ -33,35 +38,34 @@
         </div>
     </div>
     
-
+    <!-- メインビジュアル -->
+    <div class="mv-message">
+        <h1 class="mv__title">メッセージ</h1>
+    </div>
     <!-- コンテンツ -->
-    <div class="container">
-        <!-- メインビジュアル -->
-        <div class="mv-Rmessage">
-            <h1 class="mv__title">メッセージ</h1>
-        </div>
+    <div class="content">
         <!-- メッセージ -->
         <div class="message">
             <div class="message__container">
-                <div class="message__text">
-                    <h2 class="messege__">「仕事」をきっかけに、人生の新しいスタートを！</h2>
-                    <div class="subtitle">大事なお仕事探しを応援させてください</div>
-                    <div class="message_ceo">
-                        <div class="ceo_img">
-                            <img src="img/ceo.jpg" alt="社長の顔写真">
-                        </div>
-                        <div class="ceo_text">
-                            はじめまして。代表取締役社長のショーン・デイビット・ジュニアです。<br>
-                            私はそこそこ幸せです。それは仕事が楽しいからです。もちろん仕事イコール人生ではありません。でも仕事は人生の大事な基盤のように思っています。<br>
-                            株式会社STARTは、みなさんが仕事をきっかけに理想の人生を実現する手助けをしています。幸せにつながるお仕事紹介サービス『スタート』や、共通の目標を目指す仲間が見つかる人材紹介SNS『ゴール』を運営しています。また、Webデザインの基礎スキルを身につけられるスクール『Webの学校』も随時開講しています。
-                        </div>
+                <div class="message-titlearea">
+                    <h2 class="message__title">「仕事」をきっかけに<br>人生の新しいスタートを！</h2>
+                    <div class="message__subtitle">大事なお仕事探しを応援させてください</div>
+                </div>
+                <div class="message-ceo">
+                    <figure class="ceo_img_container">
+                        <img src="img/ceo.jpg" alt="社長の顔写真">
+                    </figure>
+                    <div class="ceo-text">
+                        はじめまして。代表取締役社長のショーン・デイビット・ジュニアです。<br>
+                        私はそこそこ幸せです。それは仕事が楽しいからです。もちろん仕事イコール人生ではありません。でも仕事は人生の大事な基盤のように思っています。<br>
+                        株式会社STARTは、みなさんが仕事をきっかけに理想の人生を実現する手助けをしています。幸せにつながるお仕事紹介サービス『スタート』や、共通の目標を目指す仲間が見つかる人材紹介SNS『ゴール』を運営しています。また、Webデザインの基礎スキルを身につけられるスクール『Webの学校』も随時開講しています。
                     </div>
                 </div>
-                <!-- オフィスの写真 -->
-                <div class="office__image">
-                    <img src="img/office.jpg" alt="オフィスの様子">
-                </div>
             </div>
+        </div>
+        <!-- オフィスの写真 -->
+        <div class="office__image">
+            <img src="img/office.jpg" alt="オフィスの様子">
         </div>
     </div>
     
