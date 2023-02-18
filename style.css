@@ -288,6 +288,23 @@ body {
     object-fit: cover;
   }
 }
+.content .info-list {
+  padding-left: 0;
+  margin: 0 auto;
+}
+.content .info-list .info-list__item {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  border-bottom: solid #949494 1px;
+  padding: 20px 0;
+}
+.content .map {
+  margin-top: 80px;
+}
+.content .map iframe {
+  height: 400px;
+}
 .footer {
   color: #fff;
   background-color: #DD1B57;
