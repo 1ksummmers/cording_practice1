@@ -301,6 +301,13 @@ body {
     .office__image {
         max-width: 900px;
         margin: 0 auto;
+        img {
+            @media screen and (max-width: 767px) {
+                height: 260px;
+                object-fit: cover;
+            }
+        }
+
     }
 }
 .footer {

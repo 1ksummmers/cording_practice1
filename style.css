@@ -282,6 +282,12 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .content .office__image img {
+    height: 260px;
+    object-fit: cover;
+  }
+}
 .footer {
   color: #fff;
   background-color: #DD1B57;
