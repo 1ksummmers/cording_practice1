@@ -257,6 +257,11 @@ body {
   font-size: 40px;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+  .content .message .message__container .message-titlearea .message__title {
+    font-size: 30px;
+  }
+}
 .content .message .message__container .message-titlearea .message__subtitle {
   font-size: 20px;
   font-weight: bold;
