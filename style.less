@@ -310,15 +310,17 @@ body {
 
     }
     // 階層ページ「会社概要」
+    max-width: 1100px;
+    margin: 0 auto;
     .info-list {
-        padding-left: 0;
-        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
         .info-list__item {
-            list-style: none;
-            display: flex;
-            gap: 50px;
             border-bottom: solid #949494 1px;
-            padding: 20px 0;
+            text-align: left;
+            th, td {
+                padding: 30px;
+            }
         }
     }
     .map {
