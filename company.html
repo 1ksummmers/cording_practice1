@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>START</title>
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- フォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-    
+    <!-- ヘッダー -->
+    <div class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
+                <a href="index.html" class="gnav__link--active"><img src="img/logo.svg"></a>
+            </h1>
+            <nav class="gnav">
+                <ul class="gnav__list">
+                    <li class="gnav__item"><a href="index.html" class="gnav__link">ホーム</a></li>
+                    <li class="gnav__item"><a href="message.html" class="gnav__link">メッセージ</a></li>
+                    <li class="gnav__item"><a href="#" class="gnav__link--active">会社概要</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="burger"></div>
+        <div class="menu">
+            <ul class="gnav__list">
+                <li class="gnav__item"><a href="index.html" class="gnav__link">ホーム</a></li>
+                <li class="gnav__item"><a href="message.html" class="gnav__link">メッセージ</a></li>
+                <li class="gnav__item"><a href="#" class="gnav__link--active">会社概要</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- メインビジュアル -->
+    <div class="mv-company">
+        <h1 class="mv__title">会社概要</h1>
+    </div>
+    <!-- コンテンツ -->
+    <div class="content">
+        <table class="info-list">
+            <tr class="info-list__item">
+                <th>社名</th>
+                <td>株式会社START</td>
+            </tr>
+            <tr class="info-list__item">
+                <th>設立</th>
+                <td>2023/02/18</td>
+            </tr>
+            <tr class="info-list__item">
+                <th>代表取締役</th>
+                <td>ショーン・デイビット・ジュニア</td>
+            </tr>
+            <tr class="info-list__item">
+                <th>資本金</th>
+                <td>1億円</td>
+            </tr>
+            <tr class="info-list__item">
+                <th>所在地</th>
+                <td>〒555-5555 東京都千代田区 スタートビルディング 606</td>
+            </tr>
+        </table>
+        <!-- 地図 -->
+        <div class="map">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030380878!2d139.76493611544558!3d35.68123618019435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1603888975255!5m2!1sja!2sjp"
+            width="100%" height="auto" frameborder=" 0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+            </div>
+        </div>
+
+    <!-- フッター -->
+    <div class="footer">
+        <div class="footer__container">
+            <ul class="footer-list">
+                <li>ホーム</li>
+                <li>メッセージ</li>
+                <li>会社概要</li>
+            </ul>
+            <span class="copylight">©︎START</span>
+            <div>
+                <a href="https://webdesigner-go.com/coding-practice/beginner/">参照：無料コーディング練習場所</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    </div>
 </body>
 </html>

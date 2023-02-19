@@ -136,6 +136,8 @@ body {
 }
 .content {
   padding: 70px 30px 100px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .content .news__container {
   max-width: 1110px;
@@ -287,6 +289,24 @@ body {
     height: 260px;
     object-fit: cover;
   }
+}
+.content .info-list {
+  border-collapse: collapse;
+  width: 100%;
+}
+.content .info-list .info-list__item {
+  border-bottom: solid #949494 1px;
+  text-align: left;
+}
+.content .info-list .info-list__item th,
+.content .info-list .info-list__item td {
+  padding: 30px;
+}
+.content .map {
+  margin-top: 80px;
+}
+.content .map iframe {
+  height: 400px;
 }
 .footer {
   color: #fff;
