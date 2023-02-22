@@ -1,7 +1,7 @@
 body {
   background: #fff;
   font-size: 15px;
-  font-family: 'Noto Sans', 'Noto Sans JP', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: 'Noto Sans', 'Noto Sans JP', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 .header .header__container {
   padding: 20px 70px 20px 70px;
@@ -25,7 +25,7 @@ body {
 }
 .header .header__container .gnav__list .gnav__link--active {
   text-decoration: none;
-  color: #dd1b57;
+  color: #DD1B57;
 }
 .header .burger,
 .header .menu {
@@ -33,11 +33,10 @@ body {
 }
 @media screen and (max-width: 767px) {
   .header {
-    z-index: 1;
     display: flex;
   }
   .header .header__container {
-    padding: 20px 70px 20px 20px;
+    padding: 10px 70px 10px 20px;
   }
   .header .header__container .header__logo {
     width: 70%;
@@ -46,10 +45,10 @@ body {
     display: none;
   }
   .header .burger {
-    background: #dd1b57 no-repeat center center;
+    background: #DD1B57 no-repeat center center;
     background-image: url(img/menu.svg);
-    width: 73px;
-    height: 73px;
+    width: 60px;
+    height: 60px;
     margin-left: auto;
     padding: 5px;
     display: flex;
@@ -135,18 +134,21 @@ body {
   justify-content: center;
 }
 .content {
+  color: #151515;
   padding: 70px 30px 100px 30px;
   max-width: 1100px;
   margin: 0 auto;
 }
 .content .news__container {
   max-width: 1110px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   column-gap: 90px;
   display: flex;
-  margin-bottom: 80px;
 }
 @media screen and (max-width: 767px) {
+  .content {
+    padding: 40px 20px 60px 20px;
+  }
   .content .news__container {
     display: block;
   }
@@ -201,8 +203,9 @@ body {
 }
 @media screen and (max-width: 767px) {
   .content .service__container::before {
-    font-size: 80px;
-    top: -10px;
+    font-size: 60px;
+    top: 10px;
+    right: 0;
   }
 }
 .content .service__container {
@@ -228,7 +231,7 @@ body {
   text-align: center;
 }
 .content .service__container .service-list .service-list__item .material-icons-round {
-  color: #dd1b57;
+  color: #DD1B57;
   font-size: 48px;
   vertical-align: bottom;
 }
@@ -248,7 +251,7 @@ body {
   }
 }
 .content .message .message__container {
-  margin: 30px 0 50px 0;
+  color: #151515;
 }
 .content .message .message__container .message-titlearea {
   margin-bottom: 40px;
@@ -261,16 +264,12 @@ body {
 }
 @media screen and (max-width: 767px) {
   .content .message .message__container .message-titlearea .message__title {
-    font-size: 30px;
+    font-size: 25px;
   }
-}
-.content .message .message__container .message-titlearea .message__subtitle {
-  font-size: 20px;
-  font-weight: bold;
 }
 .content .message .message__container .message-ceo {
   max-width: 750px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
 }
 .content .message .message__container .message-ceo .ceo_img_container {
   float: left;
@@ -295,12 +294,21 @@ body {
   width: 100%;
 }
 .content .info-list .info-list__item {
-  border-bottom: solid #949494 1px;
+  border-bottom: solid #EDEDED 1px;
   text-align: left;
 }
 .content .info-list .info-list__item th,
 .content .info-list .info-list__item td {
   padding: 30px;
+}
+@media screen and (max-width: 767px) {
+  .content .info-list .info-list__item th,
+  .content .info-list .info-list__item td {
+    padding: 20px 0px;
+  }
+  .content .info-list .info-list__item th {
+    width: 100px;
+  }
 }
 .content .map {
   margin-top: 80px;
